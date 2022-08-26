@@ -44,6 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
     try {
       final result = await platform.invokeMethod('getUserData');
       _user.name = result['name'];
+      _user.tel = result['tel'];
       // print(result['tel']);
       // print(result.runtimeType);
 
@@ -59,6 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     String username = _user.name.toString();
+    String tel = _user.tel.toString();
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -72,6 +74,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               username,
+              style: Theme.of(context).textTheme.headline4,
+            ),
+            Text(
+              tel,
               style: Theme.of(context).textTheme.headline4,
             ),
           ],

@@ -9,6 +9,7 @@ import io.flutter.plugin.common.MethodChannel
 import android.util.Log
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import kotlin.collections.HashMap
 
 /**
  *
@@ -29,19 +30,22 @@ class MainActivity : FlutterActivity() {
         MethodChannel(
             flutterEngine.dartExecutor.binaryMessenger,
             channel
-        ).setMethodCallHandler { call, _ ->
+        ).setMethodCallHandler { call, data ->
             if (call.method == "getUserData") {
+                val user: HashMap<String, Any> = HashMap()
                 db.collection("User")
                     .get()
                     .addOnSuccessListener { result ->
                         for (document in result) {
                             Log.d(tag, "${document.id} => ${document.data}")
+                            user["name"] = document.get("name").toString()
+                            user["tel"] = document.get("tel").toString()
                         }
+                        data.success(user)
                     }
                     .addOnFailureListener { exception ->
                         Log.w(tag, "Error getting documents.", exception)
                     }
-
 
             }
 

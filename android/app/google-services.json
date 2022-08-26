@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "263207067704",
+    "project_id": "lineverver",
+    "storage_bucket": "lineverver.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:263207067704:android:e7d418f7731af36e9a46cd",
+        "android_client_info": {
+          "package_name": "com.example.platformspecific"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "263207067704-g2m4oqjuipce3i1d0638d7hk30otsmok.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.platformspecific",
+            "certificate_hash": "82b4dc80e75d1f22326c5948019ac94a9e54f6a3"
+          }
+        },
+        {
+          "client_id": "263207067704-acl6rjv4chsd3jqgav7cbiek0rk7i7r9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChfEgi3tMAmEb_VhezPzWLtDUKcHDq8V0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "263207067704-acl6rjv4chsd3jqgav7cbiek0rk7i7r9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
